@@ -9,8 +9,8 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://trabajoml.onrender.com"],  
-    allow_credentials=True,
+    allow_origins=["*"],  
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
