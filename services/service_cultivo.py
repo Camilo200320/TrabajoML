@@ -1,7 +1,7 @@
 import pickle
 import pandas as pd
 
-# Cargar modelos
+
 with open("models/RFDcultivo.pkl", "rb") as file:
     RFDc = pickle.load(file)
 
