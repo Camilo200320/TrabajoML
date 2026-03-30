@@ -49,11 +49,12 @@ async function predict() {
     }
 
     const url = "http://127.0.0.1:8000/predict/compare";
+    const url2 = "https://trabajoml-2004.onrender.com"
 
     output.innerHTML = "<p class='loading'> ... </p>";
 
     try {
-        const response = await fetch(url, {
+        const response = await fetch(url, url2, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
