@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "Crop Recommendation - IOT",
+    "_postman_id": "compare-12345",
+    "description": "Prediccion con RandomForest y SVM",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Home",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "modelos Randoforest y SVM",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"N\": 50,\n  \"P\": 12,\n  \"K\": 23,\n  \"temperature\": 25,\n  \"humidity\": 78,\n  \"ph\": 2,\n  \"rainfall\": 49\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/predict/compare",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["predict", "compare"]
+        }
+      }
+    }
+  ]
+}
