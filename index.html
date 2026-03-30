@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Recomendación Cultivos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/favicon.ico">
 </head>
 <body>
 
@@ -48,13 +49,14 @@ async function predict() {
         return;
     }
 
-    const url = "http://127.0.0.1:8000/predict/compare";
-    const url2 = "https://trabajo-ml-v0yc.onrender.com"
+
+    // const url = "http://127.0.0.1:8000/predict/compare";
+    const url2 = "https://trabajo-ml-v0yc.onrender.com";
 
     output.innerHTML = "<p class='loading'> ... </p>";
 
     try {
-        const response = await fetch(url, url2, {
+        const response = await fetch(url2, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
