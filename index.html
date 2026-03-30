@@ -55,8 +55,10 @@ async function predict() {
 
     output.innerHTML = "<p class='loading'> ... </p>";
 
+
+    //para probarlo desde postman, cambiar url2 por url
     try {
-        const response = await fetch(url2, {
+        const response = await fetch(url2, { //modificar de aqui tambien
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
